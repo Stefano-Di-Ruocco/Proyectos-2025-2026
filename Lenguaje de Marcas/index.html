@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio Profesional de Stefano Di Ruocco - Desarrollo de Software de Alto Nivel">
+    <title>Stefano Di Ruocco | Quantum Developer</title>
+    
+    <!-- Enlace a los estilos maestros -->
+    <link rel="stylesheet" href="../Lenguaje de Marcas/sytle.css">
+    
+    <!-- Fuentes Premium (Syncopate para títulos, Space Grotesk para datos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Vectoriales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="cuerpo-oculto">
+
+    <!-- 0. CURSOR PERSONALIZADO (Círculo magnético) -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- 1. PANTALLA DE CARGA CUÁNTICA -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <span class="contador" id="contador">000</span>
+            <div class="barra-progreso"><div class="relleno-progreso" id="barra"></div></div>
+            <p class="texto-carga">INICIALIZANDO SISTEMA NEURONAL...</p>
+        </div>
+    </div>
+
+    <!-- 2. FONDO DE PARTÍCULAS (Canvas) -->
+    <canvas id="lienzo-estrellas"></canvas>
+
+    <!-- 3. NAVEGACIÓN FLOTANTE -->
+    <nav class="navegacion">
+        <div class="logo">SDR<span class="punto">.</span>DEV</div>
+        <ul class="menu">
+            <li><a href="#inicio" class="link-magnetico">HOME</a></li>
+            <li><a href="#perfil" class="link-magnetico">PERFIL</a></li>
+            <li><a href="#proyectos" class="link-magnetico">OBRAS</a></li>
+            <li><a href="#contacto" class="link-magnetico">NEXO</a></li>
+        </ul>
+        <div class="menu-hamburguesa link-magnetico">
+            <div class="linea"></div>
+            <div class="linea"></div>
+        </div>
+    </nav>
+
+    <!-- 4. CONTENIDO PRINCIPAL -->
+    <main id="scroll-container">
+        
+        <!-- SECCIÓN HERO -->
+        <section id="inicio" class="hero-section">
+            <div class="contenido-hero">
+                <p class="subtitulo revelar-texto">ARQUITECTURA DE SOFTWARE</p>
+                <h1 class="titulo-gigante">
+                    <span class="linea-titulo revelar-texto" style="transition-delay: 0.1s;">DISEÑO</span>
+                    <span class="linea-titulo revelar-texto" style="transition-delay: 0.2s;">CÓDIGO</span>
+                    <span class="linea-titulo revelar-texto resalte" style="transition-delay: 0.3s;">FUTURO</span>
+                </h1>
+                <div class="hero-footer revelar-texto" style="transition-delay: 0.5s;">
+                    <div class="scroll-indicador">
+                        <span>SCROLL</span>
+                        <div class="linea-scroll"></div>
+                    </div>
+                    <p class="ubicacion">MADRID, ES — <span id="hora-actual">00:00</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PERFIL (About) -->
+        <section id="perfil" class="seccion-perfil">
+            <div class="contenedor-ancho">
+                <div class="grid-perfil">
+                    <div class="columna-texto" data-velocidad="0.9">
+                        <h2 class="titulo-seccion">LA MENTE<br>DETRÁS DEL<br>CÓDIGO</h2>
+                        <p class="texto-grande">
+                            No solo escribo líneas de código; construyo ecosistemas digitales.
+                            Como estudiante de <span class="blanco">DAM</span>, fusiono la robustez de 
+                            <span class="blanco">Java</span> con la fluidez visual de la web moderna.
+                            Mi obsesión: el rendimiento y la estética minimalista.
+                        </p>
+                        
+                        <!-- Estadísticas en tiempo real (simuladas) -->
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="numero">02+</span>
+                                <span class="etiqueta">AÑOS ESTUDIANDO</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="numero">15+</span>
+                                <span class="etiqueta">PROYECTOS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="numero">100%</span>
+                                <span class="etiqueta">DEDICACIÓN</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="columna-imagen" data-velocidad="1.1">
+                        <div class="marco-imagen">
+                            <!-- Usa tu foto aquí -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Stefano Portrait" class="foto-pro">
+                            <div class="capa-ruido"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN STACK TECNOLÓGICO (Marquesina infinita) -->
+        <div class="tecnologias-marquee">
+            <div class="track-marquee">
+                <span>JAVA</span> <i class="fab fa-java"></i>
+                <span>HTML5</span> <i class="fab fa-html5"></i>
+                <span>CSS3</span> <i class="fab fa-css3-alt"></i>
+                <span>SQL</span> <i class="fas fa-database"></i>
+                <span>GIT</span> <i class="fab fa-git-alt"></i>
+                <span>JAVA</span> <i class="fab fa-java"></i>
+                <span>HTML5</span> <i class="fab fa-html5"></i>
+                <span>CSS3</span> <i class="fab fa-css3-alt"></i>
+            </div>
+        </div>
+
+        <!-- SECCIÓN PROYECTOS (Hover Reveal) -->
+        <section id="proyectos" class="seccion-proyectos">
+            <div class="contenedor-ancho">
+                <div class="cabecera-proyectos">
+                    <h2 class="titulo-seccion">OBRAS SELECCIONADAS</h2>
+                    <p class="contador-proyectos">01 — 03</p>
+                </div>
+
+                <div class="lista-proyectos">
+                    <!-- Proyecto 1 -->
+                    <article class="item-proyecto link-magnetico" data-imagen="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop">
+                        <div class="info-proy">
+                            <h3>GESTOR EMPRESARIAL</h3>
+                            <p>Java / MySQL / Swing</p>
+                        </div>
+                        <span class="flecha-proy">→</span>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="item-proyecto link-magnetico" data-imagen="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop">
+                        <div class="info-proy">
+                            <h3>ARCADE ENGINE</h3>
+                            <p>Game Dev / Lógica Pura</p>
+                        </div>
+                        <span class="flecha-proy">→</span>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="item-proyecto link-magnetico" data-imagen="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800&auto=format&fit=crop">
+                        <div class="info-proy">
+                            <h3>WEB INMERSIVA</h3>
+                            <p>HTML5 / CSS Avanzado</p>
+                        </div>
+                        <span class="flecha-proy">→</span>
+                    </article>
+                </div>
+                
+                <!-- Contenedor flotante para la imagen de preview -->
+                <div class="cursor-imagen-flotante" id="preview-img"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO (Minimalista) -->
+        <section id="contacto" class="seccion-contacto">
+            <div class="contenedor-ancho centrado">
+                <p class="texto-pequeno">¿TIENES UNA VISIÓN?</p>
+                <h2 class="titulo-contacto link-magnetico">
+                    <a href="mailto:hola@stefano.dev">HABLEMOS</a>
+                </h2>
+                
+                <footer class="footer-principal">
+                    <div class="col-footer">
+                        <span>© 2024 STEFANO DI RUOCCO</span>
+                    </div>
+                    <div class="col-footer redes">
+                        <a href="#" class="link-magnetico">LINKEDIN</a>
+                        <a href="#" class="link-magnetico">GITHUB</a>
+                        <a href="#" class="link-magnetico">INSTAGRAM</a>
+                    </div>
+                    <div class="col-footer">
+                        <a href="#inicio" class="volver-arriba link-magnetico">VOLVER ARRIBA ↑</a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enlace al cerebro JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
